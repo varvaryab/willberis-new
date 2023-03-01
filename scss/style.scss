@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid red;
 }
 body {
   font-family: "Lato", sans-serif;
@@ -81,13 +82,39 @@ button {
   }
 }
 .card {
-    &__wrapper {
-        padding: 60px 46px 80px;
-        &--1 {
-            background: url('../image/card-1.jpg') center / cover;
+  padding: 50px 0 60px;
+  &__container {
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+    height: 100%;
+    padding: 60px 46px 80px;
+    border-radius: 10px;
 
-        }
+    @for $item from 1 through 4 {
+      &--#{$item} {
+        background: url("../image/card-#{$item}.jpg")
+          no-repeat
+          center
+          center /
+          cover;
+      }
     }
+
+    &--3 {
+      padding: 35px 46px 60px;
+      .label {
+        margin-bottom: 30px;
+        display: inline-block;
+      }
+      .card__title {
+        margin-bottom: 20px;
+      }
+      .card__text {
+        margin-bottom: 40px;
+      }
+    }
+  }
   &__title {
     color: #262d33;
     font-weight: 700;
@@ -96,6 +123,10 @@ button {
     font-family: "Roboto Slab";
     max-width: 220px;
     margin-bottom: 15px;
+
+    &--white {
+      color: #ffffff;
+    }
   }
   &__text {
     font-size: 14px;
@@ -104,5 +135,65 @@ button {
     font-family: "Lato";
     max-width: 175px;
     margin-bottom: 25px;
+
+    &--white {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    &--pink {
+      color: #ffc4c9;
+    }
+  }
+}
+
+.card__price {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.goods {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  &__card {
+    position: relative;
+    padding: 36px;
+  }
+  &__img {
+    margin-bottom: 15px;
+  }
+  &__label {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 5px 12px;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: #3dc47e;
+    border-radius: 3px;
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4b5157;
+    font-family: "Roboto Slab";
+    margin-bottom: 5px;
+  }
+  &__text {
+    color: #4b5157;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  &__price {
+    color: #262d33;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
   }
 }

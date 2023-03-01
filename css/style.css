@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 1px solid red;
 }
 
 body {
@@ -95,12 +96,51 @@ button {
   opacity: 0.5;
 }
 
+.card {
+  padding: 50px 0 60px;
+}
+
+.card__container {
+  margin-bottom: 30px;
+}
+
 .card__wrapper {
+  height: 100%;
   padding: 60px 46px 80px;
+  border-radius: 10px;
 }
 
 .card__wrapper--1 {
-  background: url("../image/card-1.jpg") center/cover;
+  background: url("../image/card-1.jpg") no-repeat center center/cover;
+}
+
+.card__wrapper--2 {
+  background: url("../image/card-2.jpg") no-repeat center center/cover;
+}
+
+.card__wrapper--3 {
+  background: url("../image/card-3.jpg") no-repeat center center/cover;
+}
+
+.card__wrapper--4 {
+  background: url("../image/card-4.jpg") no-repeat center center/cover;
+}
+
+.card__wrapper--3 {
+  padding: 35px 46px 60px;
+}
+
+.card__wrapper--3 .label {
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.card__wrapper--3 .card__title {
+  margin-bottom: 20px;
+}
+
+.card__wrapper--3 .card__text {
+  margin-bottom: 40px;
 }
 
 .card__title {
@@ -113,6 +153,10 @@ button {
   margin-bottom: 15px;
 }
 
+.card__title--white {
+  color: #ffffff;
+}
+
 .card__text {
   font-size: 14px;
   line-height: 20px;
@@ -120,5 +164,75 @@ button {
   font-family: "Lato";
   max-width: 175px;
   margin-bottom: 25px;
+}
+
+.card__text--white {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.card__text--pink {
+  color: #ffc4c9;
+}
+
+.card__price {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.goods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.goods__card {
+  position: relative;
+  padding: 36px;
+}
+
+.goods__img {
+  margin-bottom: 15px;
+}
+
+.goods__label {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 5px 12px;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: #3dc47e;
+  border-radius: 3px;
+}
+
+.goods__title {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4b5157;
+  font-family: "Roboto Slab";
+  margin-bottom: 5px;
+}
+
+.goods__text {
+  color: #4b5157;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.goods__price {
+  color: #262d33;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */
